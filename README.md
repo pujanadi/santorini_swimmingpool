@@ -20,6 +20,23 @@ npm run lint       # oxlint
 
 Untuk menayangkan di server, arahkan web server (mis. nginx) ke folder `dist/` setelah `npm run build`.
 
+## Menjalankan dengan Docker Compose
+
+Prasyarat: Docker + Docker Compose v2.
+
+```bash
+cp .env.example .env          # opsional: isi VITE_WHATSAPP_NUMBER
+docker compose up -d --build  # build image lalu jalankan container
+docker compose ps             # cek status dan health
+docker compose logs -f        # lihat log
+docker compose down           # hentikan dan hapus container
+```
+
+- Situs tersedia di `http://127.0.0.1:8102`. Port hanya di-bind ke localhost; ubah dengan `HOST_PORT` di `.env`.
+- Image memakai build multi-stage: Node untuk `npm run build`, lalu nginx (alpine) menyajikan `dist/` dengan fallback SPA dan cache untuk `/assets/`.
+- `VITE_WHATSAPP_NUMBER` tertanam saat build. Setelah mengubahnya, jalankan `docker compose up -d --build` lagi.
+- Untuk akses publik, arahkan reverse proxy/tunnel (mis. nginx host atau Cloudflare Tunnel) ke `127.0.0.1:8102`.
+
 ## Konfigurasi
 
 | Apa | Di mana |

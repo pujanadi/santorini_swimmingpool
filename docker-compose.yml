@@ -1,0 +1,12 @@
+services:
+  santorini-swimming-pool:
+    build:
+      context: .
+      args:
+        # Isi lewat file .env di folder ini, mis. VITE_WHATSAPP_NUMBER=62XXXXXXXXXX
+        VITE_WHATSAPP_NUMBER: ${VITE_WHATSAPP_NUMBER:-}
+    image: santorini-swimming-pool:${IMAGE_TAG:-latest}
+    container_name: santorini-swimming-pool
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${HOST_PORT:-8102}:80"
