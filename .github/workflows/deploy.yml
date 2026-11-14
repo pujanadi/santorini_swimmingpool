@@ -1,0 +1,57 @@
+name: Deploy Santorini Swimmingpool Website
+
+on:
+  push:
+    branches: 
+      - main
+
+permissions:
+  contents: read
+  packages: write
+
+concurrency:
+  group: production-deployment
+  cancel-in-progress: true
+
+env:
+  IMAGE_NAME: ghcr.io/pujanadi/santorini-swimmingpool
+
+jobs:
+  deploy:
+    name: Build and Deploy
+    runs-on: self-hosted
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build Docker image
+        run: |
+          docker build \
+            -t $IMAGE_NAME:${{ github.sha }} \
+            -t $IMAGE_NAME:latest \
+            .
+
+      - name: Push Docker image
+        run: |
+          docker push $IMAGE_NAME:${{ github.sha }}
+          docker push $IMAGE_NAME:latest
+
+      - name: Deploy locally
+        run: |
+          cd /var/www/html/santorini_swimmingpool
+
+          export IMAGE_TAG=${{ github.sha }}
+
+          docker compose pull
+          docker compose up -d
+
+          sleep 5
+
+          curl --fail http://127.0.0.1:8102
