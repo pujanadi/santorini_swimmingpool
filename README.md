@@ -8,7 +8,7 @@ Dibangun dengan **React 19 + TypeScript + Vite**, tanpa library UI tambahan.
 
 ## Menjalankan
 
-Prasyarat: Node.js 20+ dan npm.
+Prasyarat: Node.js 24+ dan npm.
 
 ```bash
 npm install
