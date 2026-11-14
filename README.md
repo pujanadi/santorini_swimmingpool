@@ -37,6 +37,8 @@ docker compose down           # hentikan dan hapus container
 - `VITE_WHATSAPP_NUMBER` tertanam saat build. Setelah mengubahnya, jalankan `docker compose up -d --build` lagi.
 - Untuk akses publik, arahkan reverse proxy/tunnel (mis. nginx host atau Cloudflare Tunnel) ke `127.0.0.1:8102`.
 
+## Auto-deployment GHCR dan Actions-runner
+
 ## Konfigurasi
 
 | Apa | Di mana |
