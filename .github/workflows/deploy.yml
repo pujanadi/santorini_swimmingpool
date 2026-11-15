@@ -54,4 +54,4 @@ jobs:
 
           sleep 5
 
-          curl --fail http://127.0.0.1:8102
+          curl --fail http://127.0.0.1:8086
