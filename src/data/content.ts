@@ -58,7 +58,7 @@ export const ticketTiers: TicketTier[] = [
     icon: 'calendar',
     accent: 'teal',
     price: null,
-    note: 'Tanya harga terbaru',
+    note: 'Dewasa Rp. 15.000 - Anak Rp. 10.000',
   },
   {
     id: 'weekend',
@@ -66,7 +66,7 @@ export const ticketTiers: TicketTier[] = [
     icon: 'calendar',
     accent: 'coral',
     price: null,
-    note: 'Tanya harga terbaru',
+    note: 'Dewasa Rp. 20.000 - Anak Rp. 15.000',
   },
 ]
 

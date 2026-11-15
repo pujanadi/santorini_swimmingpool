@@ -176,3 +176,12 @@ a { color: inherit; }
   :root { scroll-behavior: auto; }
   * { transition: none !important; }
 }
+
+.google-map-box {
+  width: 100%;
+  width: 520px;
+  height: 300px; /* Explicit height is required */
+  border-radius: 12px;
+  overflow: hidden;
+  border: 0;
+}

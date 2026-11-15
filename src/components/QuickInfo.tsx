@@ -14,7 +14,7 @@ export function QuickInfo() {
     {
       icon: 'clock',
       title: 'Jam operasional',
-      text: site.openingHours ?? 'Konfirmasi sebelum datang',
+      text: site.openingHours ?? '10.00 - 17.30 WIB',
     },
   ]
   return (
