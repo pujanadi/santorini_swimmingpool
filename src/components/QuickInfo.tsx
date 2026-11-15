@@ -10,7 +10,7 @@ interface Item {
 export function QuickInfo() {
   const items: Item[] = [
     { icon: 'pin', title: 'Lokasi', text: site.location.short },
-    { icon: 'ticket', title: 'Harga tiket', text: 'Cek tarif terbaru' },
+    { icon: 'ticket', title: 'Harga tiket', text: 'Dewasa: Rp. 15.000 - Anak: Rp. 10.000' },
     {
       icon: 'clock',
       title: 'Jam operasional',
