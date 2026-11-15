@@ -1,12 +1,39 @@
+import { useState, useEffect } from 'react'
 import { site } from '../config/site'
 import { Icon } from './Icon'
 import { Scene } from './Scene'
 
+
+
 export function Hero() {
+  const [heroImageExist, setHeroImageExist] = useState(null);
+
+  const url = "https://pujanadi.ddns.net/assets/images/sanswim/santorini_swimmingpool_hero_image.jpg";
+  useEffect(() => {
+    if(!url) {
+      setHeroImageExist(false);
+      return;
+    }
+
+    const heroImage = new Image();
+    heroImage.src = url;
+
+    heroImage.onload = () => setHeroImageExist(true);
+    heroImage.onerror = () => setHeroImageExist(false);
+
+    return () => {
+      heroImage.onload = null;
+      heroImage.onerror = null;
+    };
+  }, [url]);
+
+
   return (
     <section className="hero" id="top">
       <div className="hero-art" aria-hidden="false">
-        <Scene variant="hero" label="Ilustrasi kolam renang keluarga dengan wahana air dan pegunungan" />
+        { heroImageExist ?
+        <img src="/gallery/santorini_swimmingpool_hero_image.jpg" /> : <Scene variant="hero" label="Ilustrasi kolam renang keluarga dengan wahana air dan pegunungan" />
+        }
         <span className="hero-credit">
           <Icon name="camera" size={16} /> Ilustrasi suasana
         </span>
