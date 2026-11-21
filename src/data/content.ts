@@ -29,7 +29,6 @@ export interface GalleryItem {
   scene: SceneVariant
   /** Opsional: path foto asli (mis. "/gallery/kolam.jpg" di folder public). Jika ada, menggantikan ilustrasi. */
   src?: string
-  url: string
 }
 
 export interface FaqItem {
@@ -73,11 +72,11 @@ export const ticketTiers: TicketTier[] = [
 ]
 
 export const gallery: GalleryItem[] = [
-  { id: 'g1', title: 'Kolam bersama keluarga', scene: 'family', url: 'https://pujanadi.ddns.net/assets/images/sanswi/santorini_main_pool.png' },
-  { id: 'g2', title: 'Wahana air anak', scene: 'kids', url: 'https://pujanadi.ddns.net/assets/images/sanswi/santorini_canteen.png' },
-  { id: 'g3', title: 'Pemandangan sekitar', scene: 'mountain', url: 'https://pujanadi.ddns.net/assets/images/sanswi/santorini_big_bucket_3.jpg' },
-  { id: 'g4', title: 'Bermain di kolam', scene: 'splash', url: 'https://pujanadi.ddns.net/assets/images/sanswi/santorini_playground.png' },
-  { id: 'g5', title: 'Jalur kolam renang', scene: 'lanes', url: 'https://pujanadi.ddns.net/assets/images/sanswi/santorini_fish_pond.png' },
+  { id: 'g1', title: 'Kolam bersama keluarga', scene: 'family', src: 'https://pujanadi.ddns.net/assets/images/sanswi/santorini_main_pool.png' },
+  { id: 'g2', title: 'Wahana air anak', scene: 'kids', src: 'https://pujanadi.ddns.net/assets/images/sanswi/santorini_canteen.png' },
+  { id: 'g3', title: 'Pemandangan sekitar', scene: 'mountain', src: 'https://pujanadi.ddns.net/assets/images/sanswi/santorini_big_bucket_3.jpg' },
+  { id: 'g4', title: 'Bermain di kolam', scene: 'splash', src: 'https://pujanadi.ddns.net/assets/images/sanswi/santorini_playground.png' },
+  { id: 'g5', title: 'Jalur kolam renang', scene: 'lanes', src: 'https://pujanadi.ddns.net/assets/images/sanswi/santorini_fish_pond.png' },
 ]
 
 export const faqs: FaqItem[] = [
