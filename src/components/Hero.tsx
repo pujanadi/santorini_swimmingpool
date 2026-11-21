@@ -32,8 +32,8 @@ export function Hero() {
     <section className="hero" id="top">
       <div className="hero-art" aria-hidden="false">
         {!heroImageExist ?
-            // <img src="https://pujanadi.ddns.net/assets/images/sanswi/santorini_swimmingpool_hero_image.jpg" /> : <Scene variant="hero" label="Ilustrasi kolam renang keluarga dengan wahana air dan pegunungan" />
-            <img src="/gallery/santorini_swimmingpool_hero_image.jpg"/> : <Scene variant="hero" label="Ilustrasi kolam renang keluarga dengan wahana air dan pegunungan" />
+            <img src="https://pujanadi.ddns.net/assets/images/sanswi/santorini_swimmingpool_hero_image.jpg" /> : <Scene variant="hero" label="Ilustrasi kolam renang keluarga dengan wahana air dan pegunungan" />
+            // <img src="/gallery/santorini_swimmingpool_hero_image.jpg"/> : <Scene variant="hero" label="Ilustrasi kolam renang keluarga dengan wahana air dan pegunungan" />
         }
         <span className="hero-credit">
           <Icon name="camera" size={16}/> Ilustrasi suasana
