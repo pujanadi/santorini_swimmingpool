@@ -73,7 +73,7 @@ export const ticketTiers: TicketTier[] = [
 
 export const gallery: GalleryItem[] = [
   { id: 'g1', title: 'Kolam bersama keluarga', scene: 'family', src: 'https://pujanadi.ddns.net/assets/images/sanswi/santorini_main_pool.png' },
-  { id: 'g2', title: 'Wahana air anak', scene: 'kids', src: 'https://pujanadi.ddns.net/assets/images/sanswi/santorini_canteen.png' },
+  { id: 'g2', title: 'Wahana air anak', scene: 'kids', src: 'https://pujanadi.ddns.net/assets/images/sanswi/santorini_canteen.jpg' },
   { id: 'g3', title: 'Pemandangan sekitar', scene: 'mountain', src: 'https://pujanadi.ddns.net/assets/images/sanswi/santorini_big_bucket_3.jpg' },
   { id: 'g4', title: 'Bermain di kolam', scene: 'splash', src: 'https://pujanadi.ddns.net/assets/images/sanswi/santorini_playground.png' },
   { id: 'g5', title: 'Jalur kolam renang', scene: 'lanes', src: 'https://pujanadi.ddns.net/assets/images/sanswi/santorini_fish_pond.png' },
