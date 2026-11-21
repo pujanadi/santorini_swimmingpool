@@ -4,6 +4,7 @@ export interface Highlight {
   id: string
   title: string
   scene: SceneVariant
+  url: string
 }
 
 export interface Facility {
@@ -37,9 +38,9 @@ export interface FaqItem {
 }
 
 export const highlights: Highlight[] = [
-  { id: 'family', title: 'Kolam keluarga', scene: 'family' },
-  { id: 'kids', title: 'Wahana anak', scene: 'kids' },
-  { id: 'view', title: 'Panorama pegunungan', scene: 'mountain' },
+  { id: 'family', title: 'Kolam keluarga', scene: 'family', url: 'https://pujanadi.ddns.net/assets/images/sanswi/santorini_adult_pool.png' },
+  { id: 'kids', title: 'Wahana anak', scene: 'kids', url: 'https://pujanadi.ddns.net/assets/images/sanswi/santorini_main_pool.png' },
+  { id: 'view', title: 'Panorama pegunungan', scene: 'mountain', url: 'https://pujanadi.ddns.net/assets/images/sanswi/santorini_canteen_2.png' },
 ]
 
 export const facilities: Facility[] = [

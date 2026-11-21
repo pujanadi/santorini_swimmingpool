@@ -8,7 +8,9 @@ export function Highlights() {
       <div className="highlight-grid">
         {highlights.map((h) => (
           <figure key={h.id} className="highlight-card">
-            <Scene variant={h.scene} label={`Ilustrasi ${h.title}`} />
+            {
+                h.url ? <img src={h.url} /> : <Scene variant={h.scene} label={`Ilustrasi ${h.title}`} />
+            }
             <figcaption>{h.title}</figcaption>
           </figure>
         ))}
