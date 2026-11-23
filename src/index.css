@@ -64,10 +64,10 @@ a { color: inherit; }
 /* Quick info */
 .quick { position: relative; z-index: 2; margin-top: 0; }
 .quick-list { display: grid; gap: 4px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 8px; }
-.quick-list li { display: flex; gap: 14px; align-items: center; padding: 14px 16px; }
-.quick-list li > div { display: flex; flex-direction: column; }
-.quick-list strong { font-size: 1.05rem; }
-.quick-list span:not(.quick-icon) { color: var(--muted); font-size: .95rem; }
+.quick-list li a { display: flex; gap: 14px; align-items: center; padding: 14px 16px; text-decoration: none;}
+.quick-list li a > div { display: flex; flex-direction: column; }
+.quick-list a strong { font-size: 1.05rem; }
+.quick-list a span:not(.quick-icon) { color: var(--muted); font-size: .95rem; }
 .quick-icon { color: var(--teal); flex: none; }
 
 /* Titles */
@@ -177,15 +177,6 @@ a { color: inherit; }
   * { transition: none !important; }
 }
 
-/*.google-map-box {*/
-/*  width: 100%;*/
-/*  width: 520px;*/
-/*  height: 300px; !* Explicit height is required *!*/
-/*  border-radius: 12px;*/
-/*  overflow: hidden;*/
-/*  border: 0;*/
-/*}*/
-
 .map-responsive {
   position: relative;
   padding-bottom: 56.25%; /* Rasio 16:9 */
@@ -200,5 +191,6 @@ a { color: inherit; }
   left: 0;
   width: 100%;
   height: 100%;
+  border: 0;
 }
 
